@@ -18,7 +18,7 @@ export default function Edit() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:5001/api/v1/massageShops/${massageShopID}`);
+                const response = await fetch(`${process.env.BACKEND_URL}/api/v1/massageShops/${massageShopID}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch massage shop data');
                 }

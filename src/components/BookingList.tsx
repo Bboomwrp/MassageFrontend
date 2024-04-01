@@ -4,6 +4,7 @@ import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import Link from "next/link";
 import getMassageShop from "@/libs/getMassageShop";
+import { Booking } from "../../interface";
 
 export default function BookingList() {
     
@@ -12,7 +13,7 @@ export default function BookingList() {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const res = await fetch("http://localhost:5001/api/v1/bookings",{
+                const res = await fetch(`${process.env.BACKEND_URL}/api/v1/bookings`,{
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

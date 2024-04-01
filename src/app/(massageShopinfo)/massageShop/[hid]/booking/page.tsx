@@ -26,7 +26,7 @@ export default function Bookings({ params }: { params: { hid: string } }) {
 
         try {
             // Fetch data from the backend API
-            const res = await fetch(`http://localhost:5001/api/v1/massageShops/${params.hid}/bookings`, {
+            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/massageShops/${params.hid}/bookings`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
