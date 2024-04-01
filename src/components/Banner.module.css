@@ -1,0 +1,22 @@
+.banner {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  width: 100vw;
+  height: 45vh;
+  position: relative;
+  
+}
+
+.bannerImage{
+    filter: blur(2px);
+    opacity: 0.6;
+}
+
+
+.bannerText {
+  position: relative;
+  top: 100px;
+  z-index: 20;
+  text-align: center;
+}
